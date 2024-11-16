@@ -1,0 +1,141 @@
+/* Top bar styling */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation buttons container */
+.nav-buttons {
+  display: flex;
+  padding-left: 20px;
+  gap: 20px; /* Space between buttons */
+  height: 100%;
+  padding-right: 20px;
+}
+
+/* Individual navigation button styling */
+.nav-button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+  transform-origin: top left;
+  transition: transform 0.1s ease, color 0.3s ease;
+  align-items: center;
+}
+
+/* Color change on hover */
+.nav-button:hover {
+  animation: wiggle 0.5s ease-in-out; /* Use the same animation keyframes */
+  color: #555;
+}
+
+/* Swing animation class to add animation on hover */
+.swing-animation {
+  animation: swing 2s ease-in-out forwards;
+}
+
+/* Dark mode toggle button styling */
+.dark-mode-toggle {
+  background: none;
+  border: 2px solid #333;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.dark-mode-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .top-bar {
+  background-color: #000; /* Solid black for dark mode */
+}
+
+body.dark-mode .nav-button {
+  color: #ccc;
+}
+
+body.dark-mode .dark-mode-toggle {
+  color: #fff;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* Swinging animation */
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(7deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  60% {
+    transform: rotate(-2deg);
+  }
+  70% {
+    transform: rotate(1deg);
+  }
+  80% {
+    transform: rotate(-0.5deg);
+  }
+  90% {
+    transform: rotate(0.2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

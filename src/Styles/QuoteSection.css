@@ -1,0 +1,87 @@
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+  position: relative;
+}
+
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 15vh; /* Reduced from 25vh to get closer to title */
+  height: 50vh; /* Fixed height to maintain proportion */
+  padding: 0 2vw;
+  box-sizing: border-box;
+  justify-content: space-between; /* This ensures equal spacing */
+}
+
+.quote-line-top {
+  align-self: flex-start;
+  margin-left: 5vw;
+  color: #333;
+  font-size: min(4vw, 48px);
+  line-height: 1.2;
+}
+
+.spinning-circle-wrapper {
+  align-self: center;
+  /* If you need specific positioning for the circle */
+  margin: auto 0; /* This centers it vertically in the remaining space */
+}
+
+.bottom-line-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-right: 5vw;
+}
+
+.quote-line-bottom {
+  color: #333;
+  font-size: min(4vw, 48px);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.quote-author {
+  font-size: min(3vw, 36px);
+  text-align: right;
+  margin-top: 1vh;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .quote-section {
+    top: 12vh; /* Adjusted for smaller screens */
+    height: 60vh; /* Increased height for better spacing on smaller screens */
+  }
+
+  .quote-line-top,
+  .quote-line-bottom {
+    font-size: 5vw;
+  }
+
+  .quote-author {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-section {
+    top: 10vh; /* Further adjusted for very small screens */
+    height: 65vh;
+  }
+
+  .quote-line-top,
+  .quote-line-bottom {
+    font-size: 6vw;
+  }
+
+  .quote-author {
+    font-size: 5vw;
+  }
+}

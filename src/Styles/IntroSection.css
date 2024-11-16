@@ -1,0 +1,24 @@
+/* Main intro section */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+  position: relative;
+}
+
+.intro-title {
+  font-size: 8vw;
+  font-weight: 900;
+  color: black;
+  text-align: left; /* Changed to left align */
+  padding-left: 20px; /* Match the padding of nav buttons */
+  margin: 0; /* Remove any default margins */
+  line-height: 1; /* Ensure the text sits right on its baseline */
+  /* Position the text right at the top of intro-section */
+  position: absolute;
+  top: 0;
+  /* Optional: add this if you want to prevent any text wrapping */
+  white-space: nowrap;
+}
