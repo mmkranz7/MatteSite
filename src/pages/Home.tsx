@@ -3,7 +3,7 @@ import "../Styles/DefaultPage.css";
 import PageWrapper from "../pages/PageWrapper"; // adjust path as needed
 import { Link } from "react-router-dom";
 import { getDistinctTopAndBottomTape } from "../utils/tapeOptions";
-import portrait from "../assets/Portrait.jpg"; // ensure this path is correct
+import portrait from "../assets/portrait.jpg"; // ensure this path is correct
 
 const Home: React.FC = () => {
   const [topTape, setTopTape] = useState<{
