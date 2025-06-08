@@ -1,0 +1,6 @@
+.ball {
+  background-color: black; /* Ball color */
+  position: absolute;
+  border-radius: 50%; /* Make it round */
+  z-index: 10; /* Ensure balls appear above other content */
+}

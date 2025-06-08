@@ -1,0 +1,81 @@
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "HandFont";
+  src: url("/fonts/Handwritting_thick-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: url("../assets/bedge-grunge.png");
+  color: #2e2b2b;
+  font-family: "HandFont", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Container */
+.home {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Header */
+.nameplate {
+  font-size: clamp(1.8rem, 4vw, 3rem); /* Responsive scaling */
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.nickname {
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+/* Portrait */
+.portrait-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 4px;
+}
+.page {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Optional media tweaks */
+@media (max-width: 480px) {
+  .portrait {
+    width: 100%;
+  }
+
+  .nameplate {
+    margin-bottom: 1.5rem;
+  }
+}

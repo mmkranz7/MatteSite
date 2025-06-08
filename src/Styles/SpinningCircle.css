@@ -1,0 +1,147 @@
+:root {
+  --spin-duration: 4s;
+  --pulse-duration: 2s;
+  --squiggle-duration: 4s;
+}
+
+.spinning-circle-container {
+  position: relative;
+  width: 100%;
+  height: 25vh; /* Reduced from 100vh */
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.physics-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: transparent;
+}
+
+.paint-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.spinning-circle {
+  width: 10vw;
+  height: 10vw;
+  border: 5px solid black;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.1s linear; /* Smooth transformation for scaling/stretching */
+}
+
+/* Animation effects when not dragging */
+.spinning-circle:not(.dragging) {
+  animation: spin var(--spin-duration) linear infinite,
+    pulse var(--pulse-duration) ease-in-out infinite,
+    squiggle var(--squiggle-duration) ease-in-out infinite;
+}
+
+.spinning-circle.hovered {
+  --spin-duration: 2s; /* Faster spinning */
+  --pulse-duration: 1s; /* Faster pulsing */
+  --squiggle-duration: 2s; /* Faster squiggling */
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(0.97);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.03);
+  }
+}
+
+@keyframes squiggle {
+  0%,
+  60% {
+    border-radius: 50%;
+  }
+  65% {
+    border-radius: 48% 52% 50% 50%;
+  }
+  70% {
+    border-radius: 47% 53% 50% 50%;
+  }
+  75% {
+    border-radius: 50% 55% 45% 50%;
+  }
+  80% {
+    border-radius: 50% 52% 48% 50%;
+  }
+  85%,
+  100% {
+    border-radius: 50%;
+  }
+}
+
+.paint-splatter {
+  opacity: 0.7;
+  animation: fadeOut 3s ease-out forwards;
+  filter: blur(1px);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+  10% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgb(0, 135, 222);
+  border-radius: 50%;
+  z-index: 10000;
+}

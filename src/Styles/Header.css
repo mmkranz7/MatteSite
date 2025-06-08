@@ -1,0 +1,21 @@
+.top-left-home {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 100;
+}
+
+.top-left-home button {
+  all: unset;
+  font-family: "HandFont", serif;
+  font-size: 3rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #2e2b2b;
+}
+
+.top-left-home button:hover {
+  color: #555; /* subtle hover effect */
+  transform: scale(1.03);
+}

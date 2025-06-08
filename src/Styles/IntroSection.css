@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the top */
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.intro-title-wrapper {
+  width: 100%; /* Ensure it fits within the width */
+  padding: 0 20px; /* Add padding to prevent cutting off text */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.intro-title {
+  font-family: "Oswald", sans-serif;
+  color: #333;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  text-align: center; /* Center the text */
+}
+
+.subtext {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  color: #666;
+  width: 100%; /* Ensure it fits within the width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 0 20px; /* Add padding to prevent cutting off text */
+  text-align: center; /* Center the text */
+}

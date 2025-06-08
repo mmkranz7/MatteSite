@@ -1,0 +1,121 @@
+/* Base Page Layout */
+.filmmaking-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  font-family: "IM Fell DW Pica", serif;
+  color: #2e2b2b;
+  position: relative;
+}
+
+/* Content Container */
+.filmmaking-content {
+  max-width: 900px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.filmmaking-content h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Each Project Section */
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  gap: 1.5rem;
+}
+
+.project-image {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 #999;
+  transition: transform 0.2s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.02);
+}
+
+.project-info h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  line-height: 1.5;
+}
+
+/* Spec Script Block */
+.spec-script {
+  margin-top: 4rem;
+}
+
+.spec-script h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.spec-script p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Fixed Bottom Buttons */
+.bottom-right-buttons {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Reuse global nav-button style */
+.nav-button {
+  all: unset;
+  background-color: #2e2b2b;
+  color: #f8f5f0;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #444;
+  transform: scale(1.03);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-image {
+    max-width: 100%;
+  }
+
+  .bottom-right-buttons {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}

@@ -1,0 +1,103 @@
+/* Overall Page Styling */
+.acting-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  font-family: "IM Fell DW Pica", serif;
+  color: #2e2b2b;
+  position: relative;
+}
+
+/* Main Content Area */
+.acting-content {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 1rem;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.bio {
+  margin-top: 50px;
+}
+
+.acting-content p {
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+/* Headshot & Tape */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 0; /* Prevent whitespace under image */
+}
+
+.headshot {
+  display: block; /* Removes inline image spacing */
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tape-overlay {
+  width: 80px;
+  opacity: 0.95;
+  pointer-events: none;
+  filter: grayscale(50%) brightness(0.7) blur(0.3px);
+}
+.nav-buttons button {
+  all: unset;
+  font-family: "HandFont", serif;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  color: #2e2b2b;
+  transition: transform 0.3s ease, color 0.2s ease;
+}
+.nav-buttons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-buttons button:hover {
+  color: #555; /* subtle hover effect */
+  transform: scale(1.03);
+}
+.bottom-right-fixed {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 10; /* Ensure it's on top */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bottom-right-fixed {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .acting-content {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}

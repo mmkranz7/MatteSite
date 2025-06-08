@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f5f0;
+  color: #2e2b2b;
+  font-family: "HandFont", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home {
+  text-align: center;
+  padding: 2rem;
+}
+
+.nameplate {
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.nickname {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+.portrait-container {
+  position: relative;
+  justify-content: center;
+}
+
+.portrait {
+  max-width: 500px;
+  width: 100%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1), 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.portrait-row {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  gap: 2rem; /* space between image and buttons */
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.tape-overlay {
+  width: 80px;
+  opacity: 0.95;
+  filter: grayscale(50%) brightness(0.7) blur(0.3px);
+  pointer-events: none;
+}
+.nav-buttons button {
+  all: unset;
+  font-family: "HandFont", serif;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  color: #2e2b2b;
+  transition: transform 0.3s ease, color 0.2s ease;
+}
+.nav-buttons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-buttons button:hover {
+  color: #555; /* subtle hover effect */
+  transform: scale(1.03);
+}
+
+@media (max-width: 480px) {
+  .tape-overlay-top,
+  .tape-overlay-bot {
+    width: 50px; /* smaller tape on phones */
+  }
+}
