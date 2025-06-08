@@ -3,6 +3,7 @@ import "../Styles/DefaultPage.css";
 import PageWrapper from "../pages/PageWrapper"; // adjust path as needed
 import { Link } from "react-router-dom";
 import { getDistinctTopAndBottomTape } from "../utils/tapeOptions";
+import portrait from "../assets/Portrait.jpg"; // ensure this path is correct
 
 const Home: React.FC = () => {
   const [topTape, setTopTape] = useState<{
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
         <main className="portrait-row">
           <div className="portrait-container">
             <img
-              src="src/assets/Portrait.jpg" // make sure it's in the public folder or update the path
+              src={portrait} // make sure it's in the public folder or update the path
               alt="Mateusz Kranz portrait"
               className="portrait"
             />
