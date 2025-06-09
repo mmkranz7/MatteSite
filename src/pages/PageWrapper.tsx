@@ -26,6 +26,11 @@ const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       {location.pathname !== "/" && (
         <div className="top-left-home">
           <button onClick={() => navigate("/")}>Home</button>
+          <img
+            src="src/assets/Paper04.png"
+            alt="torn paper decoration"
+            className="torn-paper"
+          />
         </div>
       )}
       {children}

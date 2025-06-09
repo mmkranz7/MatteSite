@@ -1,0 +1,62 @@
+.photography-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.photo-gallery-scrollable {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 2rem 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.photo-wrapper-scroll {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  width: auto; /* let width be auto so image can dictate it */
+}
+.photo-img-container {
+  position: relative; /* for tape positioning */
+  display: inline-block; /* shrink-wrap to image */
+  height: auto; /* no fixed height */
+}
+.photo-img-scroll {
+  max-height: 80vh; /* limit by viewport height */
+  max-width: none; /* allow width to grow naturally */
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.tape-overlay {
+  position: absolute;
+  width: 60px;
+  pointer-events: none;
+  z-index: 2;
+}
+/* Mobile / smaller screens */
+@media (max-width: 600px) {
+  .photo-wrapper-scroll {
+    max-height: 60vh; /* smaller max height on mobile */
+    height: 60vh;
+    margin: 0 1rem; /* smaller gap */
+  }
+
+  .photo-img-scroll {
+    max-height: 60vh;
+    max-width: 95vw; /* almost full width on small devices */
+  }
+}

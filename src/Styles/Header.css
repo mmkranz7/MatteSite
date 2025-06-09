@@ -3,19 +3,32 @@
   top: 1.5rem;
   left: 1.5rem;
   z-index: 100;
+  width: 120px; /* control the size */
+  height: auto;
+  text-align: center;
 }
-
+.top-left-home img.torn-paper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  width: 120px; /* same width as container */
+  opacity: 0.9;
+}
 .top-left-home button {
   all: unset;
+  position: relative;
+  z-index: 2;
   font-family: "HandFont", serif;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   color: #2e2b2b;
 }
 
 .top-left-home button:hover {
-  color: #555; /* subtle hover effect */
+  color: #555;
   transform: scale(1.03);
 }

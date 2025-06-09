@@ -1,54 +1,173 @@
-.work-hub {
-  text-align: center;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto; /* NOT 100% if causing scroll lock */
+  overflow-y: auto; /* allow vertical scroll */
+}
+
+.work-page {
   padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+
+.headshot {
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .work-title {
-  font-size: 2.5rem;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blurb {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.film-section {
+  margin-top: 2rem;
+}
+
+.film-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
-.work-tiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.work-tile {
+.project-thumb {
+  width: 250px;
+  height: auto;
   border-radius: 12px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  padding: 1rem;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.work-tile h2 {
-  text-decoration: none;
-  border-bottom: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
-.work-tile h2:hover {
-  text-decoration: none;
-  border-bottom: none;
-}
-
-/* If you are using links (e.g. <a>), include this too */
-.work-tile a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.work-tile a:hover {
-  text-decoration: none;
-}
-
-.work-tile:hover {
+.project-thumb:hover {
   transform: scale(1.03);
 }
 
-.tile-content {
-  padding: 1rem;
+.current-project {
+  margin-top: 2rem;
+}
+
+.current-project em {
+  font-style: italic;
+}
+
+.nav-buttons.bottom-right-fixed {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-button {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #333;
+}
+.torn-paper-section {
+  position: relative;
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.torn-paper-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* <- important to stretch with container */
+  opacity: 0.85;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  border-radius: 12px;
+}
+.headshot-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding-top: 2rem; /* space for top tape */
+}
+.image-inner {
+  position: relative;
+  display: inline-block;
+}
+
+.headshot {
+  width: 240px; /* adjust width as needed */
+  height: auto; /* keep natural aspect ratio */
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  position: relative;
+}
+.tape-overlay {
+  position: absolute;
+  width: 90px; /* tape size */
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+}
+.imdb-button-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.imdb-button {
+  display: inline-block;
+  background-color: #f5c518;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imdb-button:hover {
+  background-color: #e2b714;
 }

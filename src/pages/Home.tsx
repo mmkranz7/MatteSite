@@ -3,7 +3,7 @@ import "../Styles/DefaultPage.css";
 import PageWrapper from "../pages/PageWrapper"; // adjust path as needed
 import { Link } from "react-router-dom";
 import { getDistinctTopAndBottomTape } from "../utils/tapeOptions";
-import portrait from "../assets/portrait.jpg"; // ensure this path is correct
+import portrait from "../assets/portrait02.jpg"; // ensure this path is correct
 
 const Home: React.FC = () => {
   const [topTape, setTopTape] = useState<{
@@ -30,7 +30,26 @@ const Home: React.FC = () => {
     <PageWrapper>
       <div className="home">
         <header className="nameplate">
-          Mateusz <span className="nickname">'Matte'</span> Kranz
+          <img
+            src="src/assets/Paper07.png"
+            alt=""
+            style={{
+              position: "absolute",
+              top: "-12px",
+              left: "0",
+              width: "100%",
+              height: "calc(100% + 24px)", // covers spill above and below
+              objectFit: "cover",
+              zIndex: 0,
+              pointerEvents: "none",
+              userSelect: "none",
+              opacity: 0.85,
+              borderRadius: "6px",
+            }}
+          />
+          <span className="text-content">
+            Mateusz <span className="nickname">'Matte'</span> Kranz
+          </span>
         </header>
         <main className="portrait-row">
           <div className="portrait-container">
@@ -67,14 +86,80 @@ const Home: React.FC = () => {
             )}
           </div>
           <div className="nav-buttons">
-            <Link to="/work">
-              <button>my work</button>
+            <Link
+              to="/work"
+              style={{ position: "relative", display: "inline-block" }}
+            >
+              <img
+                src="src/assets/Paper01.png"
+                alt=""
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  zIndex: 0,
+                  pointerEvents: "none",
+                  userSelect: "none",
+                  opacity: 0.85,
+                  borderRadius: "6px", // optional to match button style
+                }}
+              />
+              <button style={{ position: "relative", zIndex: 1 }}>
+                my work
+              </button>
             </Link>
-            <Link to="/photography">
-              <button>photography</button>
+            <Link
+              to="/photography"
+              style={{ position: "relative", display: "inline-block" }}
+            >
+              <img
+                src="src/assets/Paper02.png"
+                alt=""
+                style={{
+                  position: "absolute",
+                  top: -5,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  zIndex: 0,
+                  pointerEvents: "none",
+                  userSelect: "none",
+                  opacity: 0.85,
+                  borderRadius: "6px",
+                }}
+              />
+              <button style={{ position: "relative", zIndex: 1 }}>
+                photography
+              </button>
             </Link>
-            <Link to="/writing">
-              <button>thoughts</button>
+            <Link
+              to="/writing"
+              style={{ position: "relative", display: "inline-block" }}
+            >
+              <img
+                src="src/assets/Paper03.png"
+                alt=""
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  zIndex: 0,
+                  pointerEvents: "none",
+                  userSelect: "none",
+                  opacity: 0.85,
+                  borderRadius: "6px",
+                }}
+              />
+              <button style={{ position: "relative", zIndex: 1 }}>
+                thoughts
+              </button>
             </Link>
           </div>
         </main>

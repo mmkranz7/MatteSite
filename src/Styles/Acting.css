@@ -101,3 +101,23 @@
     padding: 0.4rem 1rem;
   }
 }
+@media (max-width: 768px) {
+  .acting-page {
+    padding-top: 6rem; /* adjust this to create enough space for Home button */
+  }
+
+  .bottom-right-fixed {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .acting-content {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}
