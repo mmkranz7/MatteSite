@@ -3,6 +3,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "../Styles/Transitions.css";
 import "../Styles/Header.css"; // Add this if you haven't already
 
+// Import torn paper image properly:
+import paper04 from "../assets/Paper04.png";
+
 const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const location = useLocation();
@@ -27,7 +30,7 @@ const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <div className="top-left-home">
           <button onClick={() => navigate("/")}>Home</button>
           <img
-            src="src/assets/Paper04.png"
+            src={paper04}
             alt="torn paper decoration"
             className="torn-paper"
           />
