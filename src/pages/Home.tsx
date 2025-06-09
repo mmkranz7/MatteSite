@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 import { getDistinctTopAndBottomTape } from "../utils/tapeOptions";
 import portrait from "../assets/portrait02.jpg"; // ensure this path is correct
 
+// Import paper images properly:
+import paper07 from "../assets/Paper07.png";
+import paper01 from "../assets/Paper01.png";
+import paper02 from "../assets/Paper02.png";
+import paper03 from "../assets/Paper03.png";
+
 const Home: React.FC = () => {
   const [topTape, setTopTape] = useState<{
     src: string;
@@ -31,7 +37,7 @@ const Home: React.FC = () => {
       <div className="home">
         <header className="nameplate">
           <img
-            src="src/assets/Paper07.png"
+            src={paper07}
             alt=""
             style={{
               position: "absolute",
@@ -54,7 +60,7 @@ const Home: React.FC = () => {
         <main className="portrait-row">
           <div className="portrait-container">
             <img
-              src={portrait} // make sure it's in the public folder or update the path
+              src={portrait}
               alt="Mateusz Kranz portrait"
               className="portrait"
             />
@@ -91,7 +97,7 @@ const Home: React.FC = () => {
               style={{ position: "relative", display: "inline-block" }}
             >
               <img
-                src="src/assets/Paper01.png"
+                src={paper01}
                 alt=""
                 style={{
                   position: "absolute",
@@ -104,7 +110,7 @@ const Home: React.FC = () => {
                   pointerEvents: "none",
                   userSelect: "none",
                   opacity: 0.85,
-                  borderRadius: "6px", // optional to match button style
+                  borderRadius: "6px",
                 }}
               />
               <button style={{ position: "relative", zIndex: 1 }}>
@@ -116,7 +122,7 @@ const Home: React.FC = () => {
               style={{ position: "relative", display: "inline-block" }}
             >
               <img
-                src="src/assets/Paper02.png"
+                src={paper02}
                 alt=""
                 style={{
                   position: "absolute",
@@ -141,7 +147,7 @@ const Home: React.FC = () => {
               style={{ position: "relative", display: "inline-block" }}
             >
               <img
-                src="src/assets/Paper03.png"
+                src={paper03}
                 alt=""
                 style={{
                   position: "absolute",
