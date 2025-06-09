@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import headshot from "../assets/headshot.jpg";
 import theFlyImage from "../assets/thefly.jpg";
 import boringDystopiaImage from "../assets/boringdystopia.jpg";
@@ -11,7 +10,6 @@ import { getDistinctTopAndBottomTape } from "../utils/tapeOptions";
 import "../Styles/Work.css";
 
 const Work: React.FC = () => {
-  const navigate = useNavigate();
   const [topTape, setTopTape] = useState<any>(null);
   const [botTape, setBotTape] = useState<any>(null);
 
